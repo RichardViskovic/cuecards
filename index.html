@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cue Card Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <h1>Automatic Cue Card Generator</h1>
+      <div class="instructions" role="note">
+        <p><strong>Quick guide:</strong> Paste your speech below to generate cue cards instantly. Adjust the max
+          characters to fine-tune each card, then choose Print cards when you are ready.</p>
+      </div>
+      <label class="sr-only" for="note-input">Study notes input</label>
+      <textarea id="note-input" placeholder="Paste your content here..." aria-describedby="empty-state"></textarea>
+      <button type="button" id="print-button" class="button">Print cards</button>
+      <div id="empty-state" aria-live="polite">No cards yet. Add your text above to begin.</div>
+    </div>
+  </header>
+  <section id="card-container" aria-live="polite"></section>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
